@@ -1,3 +1,6 @@
+if( window.innerWidth > 600 ) {
+
+
 const cursor = document.querySelector(".cursor");
 
 window.addEventListener("mousemove", (e) => {
@@ -20,3 +23,5 @@ window.addEventListener("click", () => {
     cursor.classList.add("click");
   }
 });
+
+}
