@@ -18,6 +18,10 @@ body {
       vertical-align:bottom;
   }
 
+
+/* ===============================================================================
+CUROSR 
+*/
   .cursor {
   z-index: 100;
   position: absolute;
@@ -60,3 +64,21 @@ body {
     transform: translate(-50%, -50%) scale(7);
   }
 }
+
+
+/* ===============================================================================
+SKIP-LINK 
+*/
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background: white;
+    color: white;   
+    padding: 8px;
+    z-index: 100;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+  }
