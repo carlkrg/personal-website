@@ -82,3 +82,36 @@ SKIP-LINK
   .skip-link:focus {
     top: 0;
   }
+
+
+  /* ===============================================================================
+TEXT SELECTION COLORS
+*/
+  /*** Works on common browsers ***/
+::selection {
+  background-color: red;
+  color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+  background-color: red;
+  color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+  background-color: #352e7e;
+  color: #fff;
+}
+
+::-ms-selection {
+  background-color: #352e7e;
+  color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+  background-color: #352e7e;
+  color: #fff;
+}
