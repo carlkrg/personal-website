@@ -31,13 +31,24 @@ body {
     padding-top: 70px;
     padding-bottom: 70px;
   }
+  .container-main {
+    padding-bottom: 70px;
+  }
   .icon {
-      vertical-align:bottom;
+    vertical-align:bottom;
   }
 
   .margin-bottom {
     margin-bottom: 10px;
   }
+
+  .no-padding-bottom {
+    margin-bottom: 0px;
+  }
+
+
+
+
 
 
 /* ===============================================================================
@@ -138,4 +149,17 @@ TEXT SELECTION COLORS
   color: rgb(0, 0, 0);
 }
 
+
+  /* ===============================================================================
+FOOTER
+*/
+#footer {
+  bottom: 0;
+  color: #707070;
+  height: 2em;
+  left: 0;
+  position: relative; 
+  font-size: small;
+  width:100%;
+}
 
