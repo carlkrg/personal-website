@@ -1,9 +1,26 @@
+
 body {
     font: 20px Raleway, sans-serif;
     line-height: 1.8;
   }
-  p {
+  p{
     font-size: 25px;
+    color: #2f2f2f;
+  }
+  a{
+    font-size: 25px;
+    color: #2f2f2f;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: #00ffaa;
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+  a.link:visited {
+    text-decoration: none;
     color: #2f2f2f;
   }
   .bg-1 { 
@@ -16,6 +33,10 @@ body {
   }
   .icon {
       vertical-align:bottom;
+  }
+
+  .margin-bottom {
+    margin-bottom: 10px;
   }
 
 
@@ -31,6 +52,7 @@ CUROSR
   /* background-color: rgba(255, 255, 255, 0.356); */
   height: 30px;
   width: 30px;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 50px;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -42,13 +64,13 @@ CUROSR
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   height: 10px;
   width: 10px;
   border-radius: 50px;
 }
 .cursor::before {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 .cursor.click::before {
   animation: click 1s ease forwards;
@@ -89,29 +111,31 @@ TEXT SELECTION COLORS
 */
   /*** Works on common browsers ***/
 ::selection {
-  background-color: red;
-  color: #fff;
+  background-color: #00ffaa;
+  color: rgb(0, 0, 0);
 }
 
 /*** Mozilla based browsers ***/
 ::-moz-selection {
-  background-color: red;
-  color: #fff;
+  background-color: #00ffaa;
+  color: rgb(0, 0, 0);
 }
 
 /***For Other Browsers ***/
 ::-o-selection {
-  background-color: #352e7e;
-  color: #fff;
+  background-color: #00ffaa;
+  color: rgb(0, 0, 0);
 }
 
 ::-ms-selection {
-  background-color: #352e7e;
-  color: #fff;
+  background-color: #00ffaa;
+  color: rgb(0, 0, 0);
 }
 
 /*** For Webkit ***/
 ::-webkit-selection {
-  background-color: #352e7e;
-  color: #fff;
+  background-color: #00ffaa;
+  color: rgb(0, 0, 0);
 }
+
+
