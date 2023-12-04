@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #000;
+    background-color: #f4f4f4;
+    transition: background-color 1s ease;
+}
+
+.panel {
+    position: relative; 
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+    transition: opacity 0.5s; /* transition for the fade effect */
+    opacity: 0; /* panels are initially invisible */
+}
+
+.panel.active {
+    opacity: 1; /* visible when active */
+}
+
+
+.nav {
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 1000;
+}
+
+
+.dot-nav {
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+    margin-left: 10px;
+    line-height: 20px; /* matching the height of the dot */
+    vertical-align: middle; /* ensuring vertical alignment with any inline sibling elements */
+}
+
+.dot-title {
+    display: inline-block; /* Changed from none */
+    white-space: nowrap;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+
+/* Additional styles to make .dot-nav-link look like normal text and not a link */
+.dot-nav-link {
+    text-decoration: none;
+    color: inherit; /* this will ensure the link inherits the color of its parent or surrounding elements */
+}
+
+/* Class for active text to make it the same color as the active dot */
+.active-text {
+    /* no color is defined here, it will be set dynamically via JS */
+}
+
+.profile-border {
+    border: 5px solid #5d1ad3 !important;
+    margin-right: 2rem; /* Adjust the right margin to create more space between the image and the text */
+    display: inline-block;
+}
+
+.text-container {
+    padding: 1rem;
+}
+
+.social-links a {
+    color: inherit; /* Or any color you prefer */
+    text-decoration: none; /* Removes the underline from links */
+}
+
+.social-links a:hover {
+    color: #0d6efd; /* Or any hover color you prefer */
+}
+
+.social-links i {
+    margin-right: 0.5rem; /* Space between the icon and text, adjust as needed */
+}
+
+.arrow-container {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem; /* Adjust size as needed */
+    color: #5a5a5a;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+/* Animation for a bouncing arrow */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+
+
+
