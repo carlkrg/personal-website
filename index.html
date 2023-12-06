@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/c418794521.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
     <link rel="stylesheet" href="static/styles/styles.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
 </head>
 <body>
     <div class="nav">
@@ -22,33 +22,40 @@
         
         <a class="dot-nav-link" href="#panel-1">
             <div class="dot-nav">
+                <span class="dot-title">Map</span>
+                <div class="dot" data-inactive-color="#FFFFFF" data-active-color="#f4f4f4"></div>
+            </div>
+        </a>
+        
+        <a class="dot-nav-link" href="#panel-2">
+            <div class="dot-nav">
                 <span class="dot-title">NOVA</span>
                 <div class="dot" data-inactive-color="#FFFFFF" data-active-color="#f16923"></div>
             </div>
         </a>
         
-        <a class="dot-nav-link" href="#panel-2">
+        <a class="dot-nav-link" href="#panel-3">
             <div class="dot-nav">
                 <span class="dot-title">KPMG</span>
                 <div class="dot" data-inactive-color="#FFFFFF" data-active-color="#00A3A1"></div>
             </div>
         </a>
         
-        <a class="dot-nav-link" href="#panel-3">
+        <a class="dot-nav-link" href="#panel-4">
             <div class="dot-nav">
                 <span class="dot-title">HWR</span>
                 <div class="dot" data-inactive-color="#FFFFFF" data-active-color="#5A5A5A"></div>
             </div>
         </a>
         
-        <a class="dot-nav-link" href="#panel-4">
+        <a class="dot-nav-link" href="#panel-5">
             <div class="dot-nav">
                 <span class="dot-title">TU Berlin</span>
                 <div class="dot" data-inactive-color="#FFFFFF" data-active-color="#2F8FED"></div>
             </div>
         </a>
         
-        <a class="dot-nav-link" href="#panel-5">
+        <a class="dot-nav-link" href="#panel-6">
             <div class="dot-nav">
                 <span class="dot-title">DSS</span>
                 <div class="dot" data-inactive-color="#FFFFFF" data-active-color="#4DCF42"></div>
@@ -91,7 +98,16 @@
     
     
     
-    <div class="panel" id="panel-1" data-color="#d20e8b">
+    <div class="panel" id="panel-1" data-color="#5395ff">
+                    <div class="" style="width: 100%; height: auto; overflow: hidden;">
+                        <svg id="my_dataviz" style="width: 100%; height: 100%;"></svg>
+                    </div>
+    </div>
+       
+    
+    
+    
+    <div class="panel" id="panel-2" data-color="#d20e8b">
         <div class="container px-5 px-md-0">
             <div class="row align-items-center">
                 <div class="col-11 col-md-4 me-lg-5">
@@ -131,7 +147,7 @@
     
     
     
-    <div class="panel" id="panel-2" data-color="#005EB8">
+    <div class="panel" id="panel-3" data-color="#005EB8">
         <div class="container px-5 px-md-0">
             <div class="row align-items-center">
                 <div class="col-11 col-md-4 me-lg-5">
@@ -177,7 +193,7 @@
     
     
     
-    <div class="panel" id="panel-3" data-color="#D50C2F">
+    <div class="panel" id="panel-4" data-color="#D50C2F">
         <div class="container px-5 px-md-0">
             <div class="row align-items-center">
                 <div class="col-11 col-md-4 me-lg-5">
@@ -217,7 +233,7 @@
     
     
     
-    <div class="panel" id="panel-4" data-color="#c50e1f">
+    <div class="panel" id="panel-5" data-color="#c50e1f">
         <div class="container px-5 px-md-0">
             <div class="row align-items-center">
                 <div class="col-11 col-md-4 me-lg-5">
@@ -255,7 +271,7 @@
     
     
     
-    <div class="panel" id="panel-5" data-color="#00497b">
+    <div class="panel" id="panel-6" data-color="#00497b">
         <div class="container px-5 px-md-0">
             <div class="row align-items-center">
                 <div class="col-11 col-md-4 me-lg-5">
@@ -286,7 +302,7 @@
     </div>
     
     
-
+    <script src="static/scripts/map.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="static/scripts/script.js"></script>
 </body>
