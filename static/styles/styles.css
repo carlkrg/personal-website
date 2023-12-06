@@ -97,6 +97,24 @@ body {
     margin-right: 0.5rem; /* Space between the icon and text, adjust as needed */
 }
 
+.city-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    fill: #333;
+    pointer-events: none;
+}
+
+.city-logo {
+    transition: opacity 0.5s;
+    opacity: 0; /* initially invisible */
+}
+
+.marker:hover {
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+}
+
+
 .arrow-container {
     position: absolute;
     bottom: 20px; /* Adjust as needed */
