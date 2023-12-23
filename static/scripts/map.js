@@ -18,7 +18,7 @@ function drawMap() {
 
     const panel = document.getElementById('panel-1');
     const containerWidth = panel.clientWidth;
-    const containerHeight = panel.clientHeight;
+    const containerHeight = panel.clientHeight * 2;
     
     let zoomScale = containerWidth / (1.2 * Math.PI);
     if (window.innerWidth <= 768) {
@@ -85,8 +85,6 @@ function drawMap() {
                             .attr("height", 100) // Logo size
                             .attr("class", "city-logo")
                             .style("opacity", 0)
-                            .transition()
-                            .duration(0) // Fast animation
                             .style("opacity", 1); // Fade-in effect
                     });
                 })
@@ -100,9 +98,3 @@ function drawMap() {
 
 // Initial draw
 drawMap();
-
-// Redraw the map when the window is resized
-window.addEventListener('resize', function() {
-    clearTimeout(window.resizeId);
-    window.resizeId = setTimeout(drawMap, 500);
-});
