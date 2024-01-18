@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
             var activeColor = dots[index].dataset.activeColor;
 
             // Show titles for all dots on the home screen for larger screens
-            if (activeDotIndex === 0 && windowWidth > 576) {
+            if (activeDotIndex === 0 && windowWidth > 752) {
                 dotTitle.style.display = 'inline-block';
                 dotTitle.style.color = activeColor;
-            } else if (index === activeDotIndex && windowWidth > 576) {
+            } else if (index === activeDotIndex && windowWidth > 752) {
                 dotTitle.style.display = 'inline-block';
                 dotTitle.style.color = activeColor;
             } else {
