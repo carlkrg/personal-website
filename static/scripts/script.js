@@ -70,4 +70,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
         dotNav.addEventListener('mouseleave', updateDotsAndTitles);
     });
+
+        // Function to show the cookie banner
+        window.cb_showCookieBanner = function() {
+            var cookieBanner = document.getElementById('cb-cookie-banner');
+            if (cookieBanner) {
+                cookieBanner.style.display = 'block';
+                localStorage.removeItem('cb_cookieBannerDismissed');
+            }
+        };
+    
+        // Event listener for the 'Show Cookie Banner' button
+        var showCookieBannerBtn = document.getElementById('show-cookie-banner');
+        if (showCookieBannerBtn) {
+            showCookieBannerBtn.addEventListener('click', function() {
+                window.cb_showCookieBanner();
+            });
+        }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarTogglerIcon = navbarToggler.querySelector('i');
+
+    navbarToggler.addEventListener('click', function () {
+        if (navbarTogglerIcon.classList.contains('fa-bars')) {
+            navbarTogglerIcon.classList.remove('fa-bars');
+            navbarTogglerIcon.classList.add('fa-xmark');
+        } else {
+            navbarTogglerIcon.classList.remove('fa-xmark');
+            navbarTogglerIcon.classList.add('fa-bars');
+        }
+    });
+});
+
+
+window.cb_hideCookieBanner = function() {
+    document.getElementById('cb-cookie-banner').style.display = 'none';
+    localStorage.setItem('cb_cookieBannerDismissed', 'true');
+  };
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    if (localStorage.getItem('cb_cookieBannerDismissed') === 'true') {
+      document.getElementById('cb-cookie-banner').style.display = 'none';
+    } else {
+      document.getElementById('cb-cookie-banner').style.display = 'block';
+    }
+  });
+  

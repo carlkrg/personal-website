@@ -10,21 +10,72 @@ body {
 
 .panel {
     position: relative; 
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: 100vh; /* Minimum height is 100% of the viewport height */
+    width: 100%; /* Ensure the panel spans the full width */
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
     font-family: sans-serif;
-    transition: opacity 0.5s; /* transition for the fade effect */
-    opacity: 0; /* panels are initially invisible */
+    transition: opacity 0.5s; /* Transition for the fade effect */
+    opacity: 0; /* Panels are initially invisible */
 }
 
 .panel.active {
-    opacity: 1; /* visible when active */
+    opacity: 1; /* Visible when active */
 }
 
+/* Add an override for the privacy policy panel */
+.privacy-policy-panel {
+    min-height: 100vh;
+    height: auto; /* This allows the panel to expand to the height of the content */
+}
 
+@media (max-width: 767px) {
+    .privacy-policy-panel .container {
+        margin-top: 4rem; 
+    }
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1000; /* high z-index to ensure it's above other content */
+    top: 0;
+    left: 0;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold; /* Make the text bold */
+}
+
+.nav-item-content {
+ font-size: larger;
+}
+
+.navbar-toggler {
+    border: none; /* Remove border */
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+     .nav-item-content {
+      background-color: #f4f4f4;
+      padding: 0.1em 0.5em;
+      margin: 2px;  
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .navbar-collapse .nav-link {
+        padding: 0px;
+        margin: 0px; 
+
+    }
+  }
+  
 .nav {
     position: fixed;
     top: 10%;
@@ -114,7 +165,6 @@ body {
     cursor: pointer; /* Changes cursor to indicate interactivity */
 }
 
-
 .arrow-container {
     position: absolute;
     bottom: 20px; /* Adjust as needed */
@@ -139,6 +189,14 @@ body {
     }
 }
 
-
-
-
+#cb-cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0;
+    display: none;
+  }
+  
+  
